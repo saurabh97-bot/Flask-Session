@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is my web page, {{data}}</h1>
+    <p>This application consist of</p>
+    <li>Python File</li>
+    <li>Html File</li>
+    <li>Deployment</li>
+
+    <h2>List of Data</h2>
+    {% for i in list_data %}
+    <p>{{i}}</p>
+    {% endfor %}
+
+    <h1>User List</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+        </tr>
+        {% for emp_id,emp in data_dict.items() %}
+        <tr>
+            <td>{{emp_id}}</td>
+            <td>{{emp.Name}}</td>
+            <td>{{emp.Position}}</td>
+            <td>{{emp.Salary}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
